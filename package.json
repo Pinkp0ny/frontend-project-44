@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "module",
+    "type": "git",
     "url": "git+https://github.com/Pinkp0ny/frontend-project-44.git"
   },
   "author": "",
@@ -15,8 +15,12 @@
   "bugs": {
     "url": "https://github.com/Pinkp0ny/frontend-project-44/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/Pinkp0ny/frontend-project-44#readme",
   "bin": {
-	    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
