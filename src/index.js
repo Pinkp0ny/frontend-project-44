@@ -18,6 +18,6 @@ console.log(task);
             return;
         }
     }
-    console.log("Congratulations,", username  ,"!");
+    console.log(`Congratulations, ${username}!`);
 };
 export default game;
