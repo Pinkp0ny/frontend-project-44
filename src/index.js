@@ -9,7 +9,7 @@ console.log(task);
     for (let i = 0; i < 3; i++){
         const [correctAnswer, question] = data(); 
         console.log(question);
-        const userAnswer = readlineSync.question('Your answer: ');
+        const userAnswer = readlineSync.question('Your answer:');
         if (userAnswer == correctAnswer){
             console.log('Correct!');
         }
