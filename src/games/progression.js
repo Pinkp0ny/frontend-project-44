@@ -1,18 +1,16 @@
 import game from "../index.js";
+import randomNumber from '../randomNumber.js'
 
-function random() {
-    return (Math.floor(Math.random() * 100));
-}
-function progression(){
-    const diff = random();
-    let startnumber = random();
+const progression = () =>{
+    const diff = randomNumber();
+    let startnumber = randomNumber();
     const arr = [startnumber];
     for (let i = 0; i < 10; i++){
         startnumber += diff;
         arr.push(startnumber);
     }
     return arr;
-}
+};
 function replace(arr, del){
     arr.splice(del, 1, '..')
     return arr.join(' ');
@@ -26,6 +24,7 @@ const data = () =>{
     const question = `Question: ${arr}`;
     return [correctAnswer, question];
 };
-
+const startProgression = () => {
 game(task,data)
-export default data;
+};
+export default startProgression;

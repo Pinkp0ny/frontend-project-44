@@ -1,21 +1,16 @@
 import game from '../index.js'
+import randomNumber from '../randomNumber.js'
+import randomSign from '../randomSign.js'
 
 const task = 'What is the result of the expression?';
-function random() {
-    return (Math.floor(Math.random() * 100));
-}
-const arr = ['+', '-', '*'];
-function randznak(arr){
-    return arr[Math.floor(Math.random() * arr.length)];
-}
 
 const data = () =>{
-    const num1 = random();
-    const num2 = random();
-    const znak = randznak(arr);
-    const question = `Question: ${num1} ${znak} ${num2} `;
+    const num1 = randomNumber();
+    const num2 = randomNumber();
+    const sign = randomSign();
+    const question = `Question: ${num1} ${sign} ${num2} `;
     let correctAnswer;
-    switch (znak){
+    switch (sign){
         case '+':
              correctAnswer = num1 + num2;
             break;
@@ -26,9 +21,11 @@ const data = () =>{
              correctAnswer = num1 * num2;
             break;
             default:
-                return null;
+                return 'error';
     }
     return [correctAnswer, question];
 };
+const startCalc = () => {
 game(task, data);
-export default data;
+};
+export default startCalc;
