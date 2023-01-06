@@ -12,13 +12,8 @@ function isEven(num) {
 const data = () => {
   const num = randomNumber();
   const question = `Question: ${num} `;
-  const answer = () => {
-    if (isEven(num)) {
-      return 'yes';
-    }
-    return 'no';
-  };
-  const correctAnswer = answer();
+  const answer = isEven(num) ? 'yes' : 'no';
+  const correctAnswer = answer;
   return [correctAnswer, question];
 };
 const startEven = () => {
