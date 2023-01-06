@@ -6,7 +6,7 @@ function isPrime(num) {
   if (num < 2) {
     return false;
   }
-  for (let i = 2; i < num - 1; i++) {
+  for (let i = 2; i < num - 1; i += 1) {
     if (num % i === 0) {
       return false;
     }

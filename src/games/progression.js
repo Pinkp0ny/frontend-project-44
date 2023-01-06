@@ -5,7 +5,7 @@ const progression = () => {
   const diff = randomNumber();
   let startnumber = randomNumber();
   const arr = [startnumber];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i += 1) {
     startnumber += diff;
     arr.push(startnumber);
   }
