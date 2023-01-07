@@ -2,11 +2,10 @@
 [![Actions Status](https://github.com/Pinkp0ny/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Pinkp0ny/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/Pinkp0ny/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/844991f621f6cfc5f0dd/maintainability" /></a> 
 
-### Brain-games
+# Brain-games
 
 ### Requirements:
-  - NodeJs
-  - Ubuntu or WSL (for Windows)
+  - NodeJs v18.12.0 or higher
 
 ### Setup:
   1. git clone git@github.com:Pinkp0ny/frontend-project-44.git
