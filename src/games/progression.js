@@ -1,9 +1,9 @@
-import game from '../index.js';
-import randomNumber from '../randomNumber.js';
+import playGame from '../index.js';
+import {getRandomNumber} from '../utils.js';
 
 const progression = () => {
-  const diff = randomNumber();
-  let startnumber = randomNumber();
+  const diff = getRandomNumber(0, 100);
+  let startnumber = getRandomNumber(0, 100);
   const arr = [startnumber];
   for (let i = 0; i < 10; i += 1) {
     startnumber += diff;
@@ -16,7 +16,7 @@ function replace(arr, del) {
   return arr.join(' ');
 }
 const task = 'What number is missing in the progression?';
-const data = () => {
+const gameData = () => {
   let arr = progression();
   const del = (Math.floor(Math.random() * arr.length));
   const correctAnswer = arr[del];
@@ -25,6 +25,6 @@ const data = () => {
   return [correctAnswer, question];
 };
 const startProgression = () => {
-  game(task, data);
+  playGame(task, gameData);
 };
 export default startProgression;

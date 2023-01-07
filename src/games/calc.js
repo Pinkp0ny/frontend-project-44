@@ -1,12 +1,12 @@
-import game from '../index.js';
-import randomNumber from '../randomNumber.js';
-import randomSign from '../randomSign.js';
+import playGame from '../index.js';
+import {getRandomNumber} from '../utils.js';
+import {getRandomSign} from '../utils.js';
 
 const task = 'What is the result of the expression?';
-const data = () => {
-  const num1 = randomNumber();
-  const num2 = randomNumber();
-  const sign = randomSign();
+const gameData = () => {
+  const num1 = getRandomNumber(0, 100);
+  const num2 = getRandomNumber(0, 100);
+  const sign = getRandomSign();
   const question = `Question: ${num1} ${sign} ${num2} `;
   let correctAnswer;
   switch (sign) {
@@ -25,6 +25,6 @@ const data = () => {
   return [correctAnswer, question];
 };
 const startCalc = () => {
-  game(task, data);
+  playGame(task, gameData);
 };
 export default startCalc;
