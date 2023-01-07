@@ -1,6 +1,5 @@
 import playGame from '../index.js';
-import {getRandomNumber} from '../utils.js';
-import {getRandomSign} from '../utils.js';
+import { getRandomNumber, getRandomSign } from '../utils.js';
 
 const task = 'What is the result of the expression?';
 const gameData = () => {

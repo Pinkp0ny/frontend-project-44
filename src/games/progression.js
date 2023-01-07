@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import {getRandomNumber} from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const progression = () => {
   const diff = getRandomNumber(0, 100);

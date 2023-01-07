@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import {getRandomNumber} from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const getGcd = (num1, num2) => {
   Math.abs(num1);

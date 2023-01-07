@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import {getRandomNumber} from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 function isEven(num) {
