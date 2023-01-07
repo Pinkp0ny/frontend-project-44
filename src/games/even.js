@@ -10,7 +10,7 @@ function isEven(num) {
   return false;
 }
 const gameData = () => {
-  const num = getRandomNumber(0, 100);
+  const num = getRandomNumber();
   const question = `Question: ${num} `;
   const answer = isEven(num) ? 'yes' : 'no';
   const correctAnswer = answer;

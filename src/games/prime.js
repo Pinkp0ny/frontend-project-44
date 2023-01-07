@@ -14,7 +14,7 @@ function isPrime(num) {
   return true;
 }
 const gameData = () => {
-  const num = getRandomNumber(0, 100);
+  const num = getRandomNumber();
   const question = `Question: ${num}`;
   const answer = () => {
     if (isPrime(num)) {

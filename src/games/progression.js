@@ -2,8 +2,8 @@ import playGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
 const progression = () => {
-  const diff = getRandomNumber(0, 100);
-  let startnumber = getRandomNumber(0, 100);
+  const diff = getRandomNumber();
+  let startnumber = getRandomNumber();
   const arr = [startnumber];
   for (let i = 0; i < 10; i += 1) {
     startnumber += diff;

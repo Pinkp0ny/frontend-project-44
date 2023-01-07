@@ -3,8 +3,8 @@ import { getRandomNumber, getRandomSign } from '../utils.js';
 
 const task = 'What is the result of the expression?';
 const gameData = () => {
-  const num1 = getRandomNumber(0, 100);
-  const num2 = getRandomNumber(0, 100);
+  const num1 = getRandomNumber();
+  const num2 = getRandomNumber();
   const sign = getRandomSign();
   const question = `Question: ${num1} ${sign} ${num2} `;
   let correctAnswer;
