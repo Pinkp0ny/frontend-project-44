@@ -1,29 +1,29 @@
 import playGame from '../index.js';
-import { getRandomNumber, getRandomSign } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const task = 'What is the result of the expression?';
-const gameData = () => {
-  const num1 = getRandomNumber();
-  const num2 = getRandomNumber();
-  const sign = getRandomSign();
-  const question = `Question: ${num1} ${sign} ${num2} `;
-  let correctAnswer;
+const calculate = (num1, num2, sign) => {
   switch (sign) {
     case '+':
-      correctAnswer = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      correctAnswer = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      correctAnswer = num1 * num2;
-      break;
+      return num1 * num2;
     default:
-      return 'error';
+      throw new Error('error');
   }
+};
+const getGameData = () => {
+  const num1 = getRandomNumber();
+  const num2 = getRandomNumber();
+  const signs = ['+', '-', '*'];
+  const randomSign = signs[getRandomNumber(0, signs.length)];
+  const question = `Question: ${num1} ${randomSign} ${num2} `;
+  const correctAnswer = calculate(num1, num2, randomSign);
   return [correctAnswer, question];
 };
 const startCalc = () => {
-  playGame(task, gameData);
+  playGame(task, getGameData);
 };
 export default startCalc;

@@ -1,30 +1,27 @@
 import playGame from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
-const progression = () => {
-  const diff = getRandomNumber();
-  let startnumber = getRandomNumber();
-  const arr = [startnumber];
-  for (let i = 0; i < 10; i += 1) {
-    startnumber += diff;
-    arr.push(startnumber);
+const getProgression = (startNumber, progressionLength, diff) => {
+  const arr = [startNumber];
+  for (let i = 0; i < progressionLength; i += 1) {
+    const nextNumber = arr[i] + diff;
+    arr.push(nextNumber);
   }
   return arr;
 };
-function replace(arr, del) {
-  arr.splice(del, 1, '..');
-  return arr.join(' ');
-}
 const task = 'What number is missing in the progression?';
-const gameData = () => {
-  let arr = progression();
-  const del = (Math.floor(Math.random() * arr.length));
-  const correctAnswer = arr[del];
-  arr = replace(arr, del);
-  const question = `Question: ${arr}`;
+const getGameData = () => {
+  const startnumber = getRandomNumber();
+  const progressionLength = 10;
+  const diff = getRandomNumber();
+  const progressionIndex = getRandomNumber(0, progressionLength);
+  const arr = getProgression(startnumber, progressionLength, diff);
+  const correctAnswer = arr[progressionIndex];
+  arr[progressionIndex] = '..';
+  const question = `Question: ${arr.join(' ')}`;
   return [correctAnswer, question];
 };
 const startProgression = () => {
-  playGame(task, gameData);
+  playGame(task, getGameData);
 };
 export default startProgression;
